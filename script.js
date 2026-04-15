@@ -727,7 +727,6 @@ QUY TẮC THEO MỨC:
   + Đưa ra hướng cải thiện rõ ràng, dễ thực hiện.
 
 PHONG CÁCH:
-- Ưu tiên câu ngắn, rõ ý.
 - Tránh lặp từ giữa các học sinh.
 - Giống nhận xét viết tay của giáo viên.
 
@@ -774,7 +773,7 @@ Hãy viết nhận xét cho từng học sinh theo đúng ID và trả về đú
     systemInstruction: { parts: [{ text: systemPrompt }] },
     generationConfig: { 
       responseMimeType: "application/json",
-      temperature: 0.9
+      temperature: 0.8
     }
   })
 });
