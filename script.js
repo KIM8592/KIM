@@ -765,20 +765,20 @@ ${JSON.stringify(studentContexts)}
 
 Hãy viết nhận xét cho từng học sinh theo đúng ID và trả về đúng ${studentContexts.length} nhận xét.`;
 
-              
               try {
                 const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`, {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ 
-                    contents: [{ parts: [{ text: userInstruction }] }], 
-                    systemInstruction: { parts: [{ text: systemPrompt }] },
-                    generationConfig: { 
-                responseMimeType: "application/json",
-                  temperature: 0.8
-                }
-                  })
-                });
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ 
+    contents: [{ parts: [{ text: userInstruction }] }], 
+    systemInstruction: { parts: [{ text: systemPrompt }] },
+    generationConfig: { 
+      responseMimeType: "application/json",
+      temperature: 0.8
+    }
+  })
+});
+
                 const result = await res.json();
                 if (result.error) {
                   console.error('API error:', result.error.message);
