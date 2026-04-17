@@ -940,7 +940,7 @@ Hãy viết nhận xét cho từng học sinh theo đúng ID và trả về đú
           systemInstruction: { parts: [{ text: systemPrompt }] },
           generationConfig: { 
             responseMimeType: "application/json",
-            temperature: 0.9
+            temperature: 0.5
           }
         })
       });
@@ -1077,7 +1077,7 @@ HƯỚNG DẪN:
             systemInstruction: { parts: [{ text: systemPrompt }] },
             generationConfig: { 
               responseMimeType: "application/json",
-              temperature: 0.9
+              temperature: 0.5
             }
           })
         });
